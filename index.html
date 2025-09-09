@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab Safety Commitments</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    .brochure {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 30px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      color: #2c3e50;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      flex: 1 1 350px;
+      max-width: 500px;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.5s ease;
+      color: white;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      filter: brightness(1.05);
+    }
+
+    .card h2 {
+      font-size: 1.4em;
+      margin: 0;
+    }
+
+    .card-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+      margin-top: 15px;
+      font-size: 1em;
+      line-height: 1.6;
+    }
+
+    .card.open .card-content {
+      max-height: 200px;
+    }
+
+    /* Unique background colors */
+    .card:nth-child(1) { background: #26a69a; }
+    .card:nth-child(2) { background: #ec407a; }
+    .card:nth-child(3) { background: #7e57c2; }
+    .card:nth-child(4) { background: #ff7043; }
+    .card:nth-child(5) { background: #42a5f5; }
+    .card:nth-child(6) { background: #66bb6a; }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="brochure">
+    <header>
+      <h1>🔬 Lab Safety Commitments</h1>
+      <p>Made by Vyan Malige</p>
+    </header>
+
+    <div class="grid">
+      <div class="card" onclick="toggleCard(this)">
+        <h2>1. Follow Instructions</h2>
+        <div class="card-content">
+          <p>I will follow all instructions carefully to ensure safety and success in every lab activity.</p>
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleCard(this)">
+        <h2>2. No Eating or Drinking</h2>
+        <div class="card-content">
+          <p>I will avoid eating and drinking in class during labs to prevent contamination and accidents.</p>
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleCard(this)">
+        <h2>3. Control My Body</h2>
+        <div class="card-content">
+          <p>I will control my body to keep everyone and everything safe—no horseplay, jumping, or distractions.</p>
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleCard(this)">
+        <h2>4. Report Accidents</h2>
+        <div class="card-content">
+          <p>I will report all accidents—big or small—to the teacher immediately to ensure proper response.</p>
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleCard(this)">
+        <h2>5. Use Equipment Properly</h2>
+        <div class="card-content">
+          <p>I will use lab equipment ONLY as directed to avoid damage or injury.</p>
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleCard(this)">
+        <h2>6. Return Materials</h2>
+        <div class="card-content">
+          <p>I will return lab materials to their proper location when done to keep the lab organized and ready.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+       2025 Lab Safety Awareness | Respect the Lab, Protect the Team
+    </footer>
+  </div>
+
+  <script>
+    function toggleCard(card) {
+      card.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
